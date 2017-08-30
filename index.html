@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Medical Portal</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,15 +11,151 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+     <body class="container-fluid">
+      <div class="forms">
+      <h1>Medical Portal Login</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <p>This medical portal is designed to link patients with their doctors in
+        an interactive environment where information can be passed bidirectionally.</p>
+        <div>
+          <form id="sign-up">
+            <fieldset>
+              <legend>Sign Up Below!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <input type="password" name="credentials[password]" placeholder="Create Password">
+                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                <a href="#" class="btn btn-success">Sign Up!</a>
+              </fieldset>
+            </form>
+          </div>
+        <div>
+          <form id="sign-in">
+            <fieldset>
+                <legend>Login Below</legend>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <a href="#" class="btn btn-success">Login</a>
+              </fieldset>
+            </form>
+          </div>
+        <div>
+          <form id="change-password">
+            <fieldset>
+                <legend>Change Password Below</legend>
+                <input type="password" name="credentials[password]" placeholder="Old Password">
+                <input type="password" name="credentials[password]" placeholder="New Password">
+                <a href="#" class="btn btn-success">Submit Changes</a>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div>
+          <form id="sign-out">
+            <fieldset>
+                <legend></legend>
+                <a href="#" class="btn btn-success">Logout</a>
+              </fieldset>
+            </form>
+          </div>
+
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Hello World</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+
+      <!-- Page Content -->
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3">
+            <h1 class="my-4">Medical Portal</h1>
+            <div class="list-group">
+              <a href="#" class="list-group-item active">Dr. Proctor - Not a real doctor, at all.  Not a specialist.  Not a medical expert of any kind.</a>
+              <a href="#" class="list-group-item">Dr. Yeuryll - An okay doctor, if you are sick.</a>
+              <a href="#" class="list-group-item">Dr. Longlyfe - A doctor who will live a long life, even if you don't.</a>
+            </div>
+          </div>
+          <!-- /.col-lg-3 -->
+
+          <div class="col-lg-9">
+
+            <div class="card mt-4">
+              <!-- <img class="card-img-top img-fluid" src="http://www.arthritis.org/images/LWA/promos/dblt-communicate-doctor-promo.jpg" alt=""> -->
+              <div class="card-body">
+                <h3 class="card-title">Name</h3>
+                <h4>Hello World</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+              </div>
+            </div>
+            <!-- /.card -->
+            <div>
+              <form id="create-post">
+                <fieldset>
+                    <legend>Post</legend>
+                    <!-- <input type="string" placeholder="Title"> -->
+                    <input type="text" placeholder="Type Post Here">
+                    <a href="#" class="btn btn-success">Post</a>
+                    <!-- <input type="submit" name="submit" value="Submit"> -->
+                  </fieldset>
+                </form>
+              </div>
+
+            <div class="card card-outline-secondary my-4">
+              <div class="card-header">
+                Questions
+              </div>
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                <small class="text-muted">Posted by {{app}} on 3/1/17</small>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                <hr>
+                <a href="#" class="btn btn-success">Submit Comment</a>
+              </div>
+            </div>
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col-lg-9 -->
+
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+      <!-- Footer -->
+      <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; MedPortal 2017</p>
+        </div>
+        <!-- /.container -->
+      </footer>
     </body>
 </html>
